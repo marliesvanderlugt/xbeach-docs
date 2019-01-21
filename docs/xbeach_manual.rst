@@ -1191,7 +1191,7 @@ value is in the order of :math:`55 {m}^{1/2}/s`.
 .. math::
    :label: dimensionless-chezy
            
-   c_{f} =\sqrt{\frac{g}{C^{2} } }
+   c_{f} =\frac{g}{C^{2} } 
 
 In the Manning formulation the Manning coefficient (:math:`n`) must be
 specified. The dimensionless friction coefficient is calculated from
@@ -1202,7 +1202,7 @@ order of :math:`0.02 s/{m}^{1/3}`.
 .. math::
    :label: dimensionless-manning
            
-   c_{f} =\sqrt{\frac{gn^{2} }{h^{1/3} } }
+   c_{f} =\frac{gn^{2} }{h^{1/3} } 
 
 In the White-Colebrook formulation the geometrical roughness of
 Nikuradse (:math:`{k}_{s}`) must be specified. The dimensionless
@@ -1213,7 +1213,7 @@ and a typical :math:`{k}_{s}` value would be in the order of 0.01 - 0.15 m.
 .. math::
    :label: dimensionless-nikuradse
            
-   c_{f} =\sqrt{\frac{g}{\left(18\log \left(\frac{12h}{k_{s} } \right)\right)^{2} } }
+   c_{f} =\frac{g}{\left(18\log \left(\frac{12h}{k_{s} } \right)\right)^{2} } 
 
 The option of White-Colebrook based on the grain size is somewhat
 different than the other four formulations. This formulation is based
@@ -1226,7 +1226,7 @@ value for the bed friction coefficient.
 .. math::
    :label: dimensionless-nikuradse2
            
-   c_{f} =\sqrt{\frac{g}{\left(18\log \left(\frac{12h}{3D_{90} } \right)\right)^{2} } }
+   c_{f} =\frac{g}{\left(18\log \left(\frac{12h}{3D_{90} } \right)\right)^{2} } 
 
 Values of the drag coefficient for different seabed sediment grain sizes
 (flat beds) and similarly for bed form scenarios have been empirically
@@ -2165,7 +2165,7 @@ advection-diffusion equation, repeated here:
 .. math::
    :label:
 
-   \begin{array}{c} {\frac{\partial hC}{\partial t} +\frac{\partial hC(u^{E} -u_{a} \sin \theta _{m} )}{\partial x} +\frac{\partial hC(v^{E} -u_{a} \cos \theta _{m} )}{\partial y} } \\ {+\frac{\partial }{\partial x} \left[D_{h} h\frac{\partial C}{\partial x} \right]+\frac{\partial }{\partial y} \left[D_{h} h\frac{\partial C}{\partial y} \right]=\frac{hC_{eq} -hC}{T_{s} } } \end{array}
+   \begin{array}{c} {\frac{\partial hC}{\partial t} +\frac{\partial hC(u^{E} +u_{a} \cos \theta _{m} )}{\partial x} +\frac{\partial hC(v^{E} +u_{a} \sin \theta _{m} )}{\partial y} } \\ {+\frac{\partial }{\partial x} \left[D_{h} h\frac{\partial C}{\partial x} \right]+\frac{\partial }{\partial y} \left[D_{h} h\frac{\partial C}{\partial y} \right]=\frac{hC_{eq} -hC}{T_{s} } } \end{array}
 
 XBeach considers the wave energy of short waves as averaged over their
 length, and hence does not simulate the wave shape. A discretization of
